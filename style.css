@@ -1,0 +1,88 @@
+:root{
+    --white : #ffffff;
+    --light-gray : hsl(212, 45%, 89%);
+    --grayish-blue :  hsl(220, 15%, 55%);
+    --Dark-Blue: hsl(218, 44%, 22%);
+    --paragraph: 15px;
+    --font: "Outfit"
+}
+html{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--light-gray)
+}
+p{
+    font-size: var(--paragraph);
+    font-family: var(--font);
+    text-align: center;
+    color: var(--grayish-blue)  ;
+}
+h2{
+    font-family: var(--font);
+    text-align: center;
+    color: var(--Dark-Blue);
+}
+a{
+    color: var(--Dark-Blue);
+}
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kartu{
+    box-sizing: border-box;
+    position: relative;
+    height: 600px;
+    width: 400px;
+    background-color: var(--white);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px
+}
+.kartu > img{
+    flex: 2;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+}
+.kartu-bawah{
+    flex: 1;
+    padding: 0 35px;
+}
+footer{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;font-family: var(--font);
+    text-align: center;
+    color: var(--grayish-blue)
+}
+
+@media screen and (max-width: 720px){
+    .kartu{
+        width: 90%;
+        height: 550px;
+    }
+    .kartu > img{
+        height: inherit;
+    }
+    .kartu-bawah{
+        padding: 10px;
+    }
+    footer{
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+    }
+}
